@@ -1,17 +1,38 @@
-# Percona Distribution for PostgreSQL 14.5 (2022-09-05)
+# Percona Distribution for PostgreSQL 15 (2022-10-)
 
 
-| Release date:     | September 5, 2022        |
+| Release date:     | October , 2022        |
 |:------------------|:-----------------------|
 | **Installation**: | [Installing Percona Distribution for PostgreSQL](installing.md) |
 
 
-Percona Distribution for PostgreSQL is a collection of tools to assist you in managing PostgreSQL. Percona Distribution for PostgreSQL
+We are pleased to announce the launch of Percona Distribution for PostgreSQL 14.1 -  a collection of tools to assist you in managing PostgreSQL. Percona Distribution for PostgreSQL
 installs PostgreSQL and complements it by a selection of extensions that
 enable solving essential practical tasks efficiently.
 
-This release of Percona Distribution for PostgreSQL is based on [PostgreSQL 14.5](https://www.postgresql.org/docs/14/release-14-5.html). 
+This release of Percona Distribution for PostgreSQL is based on [PostgreSQL 14.1](https://www.postgresql.org/docs/14/release-14-1.html).
 
+## Release Highlights
+
+PostgreSQL 14 provides an extensive set of new features and enhancements to security, performance, usability for client applications and more. 
+
+Most notable of them include the following:
+
+* Expired B-tree index entries can now be detected and removed between vacuum runs. This results in lesser number of page splits and reduces the index bloat. 
+* The vacuum process now deletes B-tree pages in a single cycle, without marking them as deleted during the first run. This speeds up free space cleanup.
+* Support for subscripts in JSON is added to simplify data retrieval using a commonly recognized syntax. 
+* Stored procedures can accept OUT parameters.
+* The [libpq](https://www.postgresql.org/docs/14/libpq.html) library now supports the pipeline mode. Previously, the client applications waited for a transaction to be completed before sending the next one. The pipeline mode allows the applications to send multiple transactions at the same time thus boosting performance.
+* Large transactions are now streamed to subscribers in-progress, thus increasing the performance. This improvement applies to logical replication API as well.
+* LZ4 compression is added for [TOAST](https://www.postgresql.org/docs/current/storage-toast.html) operations. This speeds up large data processing.
+* SCRAM is made the default authentication mechanism. This mechanism improves security and simplifies regulatory compliance for data security.
+
+!!! seealso
+
+    * [PostgreSQL 14.1 release notes](https://www.postgresql.org/docs/14/release-14-1.html)
+    * Percona Blog: [PostgreSQL 14 - Performance, Security, Usability, and Observability](https://www.percona.com/blog/postgresql-14-performance-security-usability-and-observability/)
+    * [Using the Range and the New Multirange Data Type in PostgreSQL 14](https://www.percona.com/blog/using-the-multirange-data-type-in-postgresql-14/)
+    * [Using New JSON Syntax in PostgreSQL 14 - Update](https://www.percona.com/blog/using-new-json-syntax-in-postgresql-14-update/)
 
 The following is the list of extensions available in Percona Distribution for PostgreSQL.
 

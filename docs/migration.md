@@ -29,7 +29,7 @@ Depending on your business requirements, you may migrate to Percona Distribution
       4. Enable the repository
 
            ```sh
-           $ sudo percona-release setup ppg14
+           $ sudo percona-release setup ppg15
            ```
 
       5. [Install Percona Distribution for PostgreSQL packages](installing.md#install-percona-distribution-for-postgresql-packages)
@@ -54,7 +54,7 @@ Depending on your business requirements, you may migrate to Percona Distribution
       1. Stop the `postgresql` server   
 
           ```sh
-          $ sudo systemctl stop postgresql-14
+          $ sudo systemctl stop postgresql-15
           ```
 
       2. Remove community packages
@@ -67,7 +67,7 @@ Depending on your business requirements, you may migrate to Percona Distribution
       4. Enable the repository
 
            ```sh
-           $ sudo percona-release setup ppg14
+           $ sudo percona-release setup ppg15
            ```
 
       5. [Install Percona Distribution for PostgreSQL packages](installing.md#install-percona-distribution-for-postgresql-packages)
@@ -75,7 +75,7 @@ Depending on your business requirements, you may migrate to Percona Distribution
       7. Start the `postgresql` service
 
           ```sh
-          $ sudo systemctl start postgresql-14
+          $ sudo systemctl start postgresql-15
           ```
 
 
@@ -99,7 +99,7 @@ To migrate from PostgreSQL Community to Percona Distribution for PostgreSQL on a
     === "On RHEL and derivatives"
 
          ```sh
-         $ sudo systemctl stop postgresql-14
+         $ sudo systemctl stop postgresql-15
          ```
 
 3. Optionally, remove PostgreSQL Community packages 
@@ -110,7 +110,7 @@ To migrate from PostgreSQL Community to Percona Distribution for PostgreSQL on a
 2. Enable the repository
 
     ```sh
-    $ sudo percona-release setup ppg14
+    $ sudo percona-release setup ppg15
     ```
 
 3. [Install Percona Distribution for PostgreSQL packages](installing.md#install-percona-distribution-for-postgresql-packages) on the target server.
@@ -126,5 +126,5 @@ To migrate from PostgreSQL Community to Percona Distribution for PostgreSQL on a
     === "On RHEL and compatible derivatives"
 
          ```sh
-         $ sudo systemctl start postgresql-14
+         $ sudo systemctl start postgresql-15
          ```

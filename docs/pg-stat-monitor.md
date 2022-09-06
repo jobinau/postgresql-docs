@@ -2,7 +2,7 @@
 
 !!! note
 
-    This document describes the functionality of pg_stat_monitor 1.0.0.
+    This document describes the functionality of pg_stat_monitor 1.1.0.
 
 ## Overview
 
@@ -69,7 +69,7 @@ To install `pg_stat_monitor`, run the following commands:
     1. Enable the repository
 
         ```sh
-        $ sudo percona-release setup ppg14
+        $ sudo percona-release setup ppg15
         ```
 
     2. Update the local cache
@@ -81,7 +81,7 @@ To install `pg_stat_monitor`, run the following commands:
     3. Install the package:
 
         ```sh
-        $ sudo apt-get install percona-pg-stat-monitor14
+        $ sudo apt-get install percona-pg-stat-monitor15
         ```
 
 === "On Red Hat Enterprise Linux and derivatives"
@@ -89,13 +89,13 @@ To install `pg_stat_monitor`, run the following commands:
     1. Enable the repository
 
         ```sh
-        $ sudo percona-release setup ppg14
+        $ sudo percona-release setup ppg15
         ```
     
     2. Install the package:
 
         ```sh
-        $ sudo yum install percona-pg-stat-monitor11
+        $ sudo yum install percona-pg-stat-monitor15
         ```
 
 ## Setup
@@ -105,7 +105,7 @@ To install `pg_stat_monitor`, run the following commands:
 
 1. Add `pg_stat_monitor` in the `shared_preload_libraries` configuration parameter.
 
-    The recommended way to modify PostgreSQL configuration file is using the [ALTER SYSTEM](https://www.postgresql.org/docs/14/sql-altersystem.html) command. [Connect to psql](installing.md#connect-to-the-server) and use the following command:
+    The recommended way to modify PostgreSQL configuration file is using the [ALTER SYSTEM](https://www.postgresql.org/docs/15/sql-altersystem.html) command. [Connect to psql](installing.md#connect-to-the-server) and use the following command:
 
     ```sql
     ALTER SYSTEM SET shared_preload_libraries = 'pg_stat_monitor';
@@ -136,7 +136,7 @@ To install `pg_stat_monitor`, run the following commands:
     === "On Red Hat Enterprise Linux and derivatives"
 
          ```
-         $ sudo systemctl restart postgresql-14
+         $ sudo systemctl restart postgresql-15
          ```
 
 
@@ -152,7 +152,7 @@ To install `pg_stat_monitor`, run the following commands:
   
     To check the version of the extension, run the following command in the `psql` session:
 
-    ```sh
+    ```sql
     SELECT pg_stat_monitor_version();
     ``` 
 
@@ -224,7 +224,7 @@ Restart the server to apply the change:
 === "On Red Hat Enterprise Linux and derivatives"
 
      ```
-     $ sudo systemctl restart postgresql-14
+     $ sudo systemctl restart postgresql-15
      ```
 
 Verify the updated parameter:
